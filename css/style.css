@@ -1,0 +1,654 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  } 
+  body{
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    position: relative;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none !important;
+  }
+  a:focus {
+    /*color: inherit;*/
+    outline: none;
+    text-decoration: none;
+  }
+  ul,li{
+    list-style: none;
+  }
+  a, button, img, input, span {
+      transition: all 0.3s ease 0s;
+  }
+  *:focus {
+      outline: none !important;
+  }
+  button, input[type="submit"] {
+    cursor: pointer;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .right-deg {
+    line-height: 0.5;
+  }
+  .cloud-img img {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .right-deg h3 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .time-are {
+      font-size: 43px;
+      font-weight: 400;
+  }
+.zone {
+    font-weight: 200;
+    font-size: 35px;
+}
+.days-date {
+    position: absolute;
+    font-size: 12px;
+    padding-left: 4px;
+}
+.home-img img {
+    width: 37px;
+    background: #52D6BE;
+    padding: 12px 6px 22px;
+}
+.footer-area {
+    float: right;
+    clear: both;
+}
+ul.horizon_images li img {
+    width: 40px;
+    padding: 11px 0;
+}
+.active {
+    background: #52D6BE;
+}
+.right-icons {
+    float: right;
+}
+ul.horizon_images {
+    display: inline-block;
+}
+ul.horizon_images li {
+    padding: 0px 48px 0px 12px;
+}
+.right-icons {
+    right: 0;
+    position: absolute;
+    top: 35%;
+}
+h2.bathroom_head {
+    margin-right: 9px;
+}
+ul.foote_bootom_icon li img {
+    width: 78px;
+    padding: 0 6px;
+}
+ul.foote_bootom_icon li {
+    display: inline-block;
+}
+ul.foote_bootom_icon-2 li {
+    display: inline-block;
+}
+ul.foote_bootom_icon-2 li img {
+    width: 50px;
+    padding: 16px 7px 31px;
+}
+.motion img {
+    width: 134px;
+}
+.list-box img{
+    width: 65px;
+    margin-right: 10px;
+    padding: 5px;
+}
+.list-box{
+    display: flex;
+    align-items: center;
+}
+.list-box p{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.left-side-box{
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 0px 0px 4px #dddddd;
+    background: linear-gradient(180.02deg, #FFEB82 -7.89%, #FFFFFF 12.77%);
+}
+.right-side-box{
+    margin-left: 300px;
+    padding: 20px;
+}
+.trash-pickup-box{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0px 10px 20px 10px;
+    display: flex;
+    align-items: center;
+}
+.trash-pickup-box img{
+    width: 30px;
+    margin-right: 20px;
+}
+.left-bottom-footer{
+    padding-top: 50px;
+}
+.left-bottom-footer img{
+    width: 90px;
+}
+.day-time-area{
+    text-align: center;
+}
+.day-time-area h2{
+    font-size: 45px;
+    padding-top: 20px;
+    font-weight: 700;
+}
+.day-time-area sub{
+    font-size: 16px;
+    font-weight: 100;
+}
+.day-time-area h4{
+    font-size: 24px;
+    font-weight: 400;
+}
+.right-side-box {
+    text-align: center;
+}
+.right-side-map img{
+    width: 500px;
+    object-fit: contain;
+    margin-top: 55px;
+    transform: rotate(-16deg);
+}
+.right-bottom-fixed-box{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0px 10px 20px 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+.right-bottom-fixed-box img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+.right-side-box ul.foote_bootom_icon-2 li img{
+    width: 35px;
+    padding: 0px !important;
+    margin: 0px 8px;
+}
+.comn-thumb-box{
+    position: relative;
+    width: 800px;
+    height: 650px;
+    margin: auto;
+}
+.summary-icon1{
+    position: absolute;
+    width: 150px;
+    left: 90px;
+    bottom: 288px;
+}
+.summary-icon2{
+    position: absolute;
+    width: 230px;
+    right: 83px;
+    top: 65px;
+}
+.hvac-icon1{
+    width: 80px;
+    position: absolute;
+    top: 388px;
+    left: 236px;
+}
+.hvac-icon2{
+    width: 80px;
+    position: absolute;
+    top: 318px;
+    right: 300px;
+}
+.hvac-icon3{
+    width: 80px;
+    position: absolute;
+    bottom: 170px;
+    left: 300px;
+}
+.hvac-all-icon1{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.living-room-1-icon1{
+    width: 80px;
+    position: absolute;
+    top: 150px;
+    left: 320px;
+}
+.living-room-1-icon2{
+    width: 27px;
+    position: absolute;
+    top: 150px;
+    left: 244px;
+}
+.living-room-1-icon3{
+    width: 28px;
+    position: absolute;
+    bottom: 165px;
+    right: 290px;
+}
+.living-room-1-icon4{
+    width: 35px;
+    position: absolute;
+    top: 160px;
+    right: 140px;
+}
+.living-room-1-icon5{
+    width: 80px;
+    position: absolute;
+    bottom: 144px;
+    left: 52px;
+}
+.living-room-1-icon6{
+    width: 90px;
+    position: absolute;
+    top: 94px;
+    left: 186px;
+}
+.living-room-1-icon7{
+    width: 90px;
+    position: absolute;
+    top: 90px;
+    right: 170px;
+}
+.living-room-1-icon8{
+    width: 40px;
+    position: absolute;
+    top: 61px;
+    right: 383px;
+}
+.living-room-1-icon9{
+    width: 90px;
+    position: absolute;
+    bottom: 191px;
+    right: 100px;
+}
+.living-room-1-icon10{
+    width: 50px;
+    position: absolute;
+    bottom: 97px;
+    left: 197px;
+}
+.living-room-2-icon1{
+    width: 80px;
+    position: absolute;
+    top: 285px;
+    left: 440px;
+}
+.living-room-2-icon2{
+    width: 33px;
+    position: absolute;
+    top: 240px;
+    left: 320px;
+}
+.living-room-2-icon4{
+    width: 35px;
+    position: absolute;
+    bottom: 250px;
+    right: 120px;
+}
+.living-room-2-icon6{
+    width: 110px;
+    position: absolute;
+    top: 100px;
+    left: 145px;
+}
+.living-room-2-icon7{
+    width: 110px;
+    position: absolute;
+    top: 91px;
+    right: 160px;
+}
+.comn-livingroom-small-box{
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 2px 4px #e4e4e4;
+    border-radius: 16px;
+    padding: 15px;
+} 
+.vent-box{
+    width: 100px;
+    height: 112px;
+    top: 14px;
+    left: 332px;
+    text-align: center;
+}
+.comn-livingroom-heading{
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 10px;
+    text-align: center;
+    color: #777777;
+}
+.vent-icon1{
+    width: 28px;
+    margin: 0px 0px;
+}
+.vent-icon2,
+.fan-icon2{
+    width: 105px;
+}
+.fan-box{
+    width: 95px;
+    height: 110px;
+    top: 160px;
+    left: 275px;
+    text-align: center;
+}
+.fan-icon1{
+    width: 40px;
+}
+.bind-box{
+    width: 100px;
+    height: 100px;
+    top: 156px;
+    right: 0px;
+    text-align: center;
+}
+.bind-icon1{
+    width: 28px;
+}
+.tunable-box{
+    width: 100px;
+    height: 150px;
+    bottom: 70px;
+    right: 114px;
+    text-align: center;
+}
+.tunable-icon1{
+    width: 88px;
+    margin-top: 8px;
+}
+.enteryway-box{
+    width: 100px;
+    height: 150px;
+    bottom: 68px;
+    right: 273px;
+    text-align: center;
+}
+.enteryway-icon1{
+    width: 55px;
+    margin: 8px 0px;
+}
+.enteryway-icon2{
+    width: 115px;
+    margin-top: 10px;
+}
+.accent-box{
+    width: 100px;
+    height: 180px;
+    bottom: 40px;
+    left: 20px;
+    text-align: center;
+}
+.accent-icon1{
+    width: 105px;
+}
+.accent-icon2{
+    width: 115px;
+}
+.comn-livingroom-heading span{
+    font-size: 18px;
+}
+.bedroom-icon1{
+    width: 75px;
+    position: absolute;
+    bottom: 228px;
+    right: 310px;
+}
+.bedroom-icon2{
+    width: 30px;
+    position: absolute;
+    top: 122px;
+    left: 308px;
+}
+.bedroom-icon3{
+    width: 20px;
+    position: absolute;
+    top: 247px;
+    right: 237px;
+}
+.bedroom-icon4{
+    width: 20px;
+    position: absolute;
+    bottom: 141px;
+    right: 238px;
+}
+.bedroom-icon5{
+    width: 60px;
+    position: absolute;
+    bottom: 123px;
+    left: 208px;
+}
+.lighting-icon1{
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.office-icon1{
+    width: 90px;
+    position: absolute;
+    top: 140px;
+    right: 305px;
+}
+.office-icon2{
+    width: 40px;
+    position: absolute;
+    top: 60px;
+    left: 240px;
+}
+.office-icon3{
+    width: 175px;
+    position: absolute;
+    bottom: 130px;
+    right: 258px;
+}
+.bathroom-icon1{
+    width: 30px;
+    position: absolute;
+    top: 198px;
+    left: 147px;
+}
+.bathroom-icon2{
+    width: 30px;
+    position: absolute;
+    top: 188px;
+    right: 220px;
+}
+.bathroom-icon3{
+    width: 28px;
+    position: absolute;
+    top: 232px;
+    right: 88px;
+}
+.bathroom-icon4{
+    width: 28px;
+    position: absolute;
+    bottom: 232px;
+    right: 88px;
+}
+.bathroom-icon5{
+    width: 130px;
+    position: absolute;
+    top: 170px;
+    left: 225px;
+}
+/*kitchen icon*/
+.kitchen-icon1{
+    width: 80px;
+    position: absolute;
+    top: 167px;
+    left: 170px;
+}
+.kitchen-icon2{
+    width: 48px;
+    position: absolute;
+    top: 246px;
+    right: 244px;
+}
+.kitchen-icon3{
+    width: 80px;
+    position: absolute;
+    bottom: 60px;
+    left: 161px;
+}
+.kitchen-icon4{
+    width: 48px;
+    position: absolute;
+    bottom: 50px;
+    right: 210px;
+}
+.kitchen-icon5{
+    width: 447px;
+    position: absolute;
+    top: 42px;
+    right: 67px;
+}
+.kitchen-icon6{
+    width: 30px;
+    position: absolute;
+    top: 143px;
+    left: 101px;
+}
+.kitchen-icon7{
+    width: 40px;
+    position: absolute;
+    bottom: 114px;
+    left: 363px;
+}
+.kitchen-icon8{
+    width: 55px;
+    position: absolute;
+    bottom: 156px;
+    right: 11px;
+}
+/*linking of pages*/
+.bathroom-anchor-link{
+    position: absolute;
+    background-color: transparent;
+    width: 185px;
+    height: 80px;
+    left: 78px;
+    top: 54px;
+}
+.livingroom1-anchor-link{
+    position: absolute;
+    background-color: transparent;
+    width: 377px;
+    height: 151px;
+    left: 78px;
+    bottom: 120px;
+}
+.kitchen-anchor-link{
+    position: absolute;
+    background-color: transparent;
+    width: 190px;
+    height: 140px;
+    left: 261px;
+    bottom: 280px;
+}
+.office-anchor-link{
+    position: absolute;
+    background-color: transparent;
+    width: 110px;
+    height: 160px;
+    left: 344px;
+    top: 59px;
+}
+.bedroom-anchor-link{
+    position: absolute;
+    background-color: transparent;
+    width: 160px;
+    height: 190px;
+    left: 84px;
+    top: 178px;
+}
+
+/*lighting-thumb-box*/
+.lighting-thumb-box .bathroom-anchor-link,
+.lighting-thumb-box .livingroom1-anchor-link,
+.lighting-thumb-box .kitchen-anchor-link,
+.lighting-thumb-box .office-anchor-link,
+.lighting-thumb-box .bedroom-anchor-link{
+    margin-left: 40px;
+}
+/*hvac-thumb-box*/
+.hvac-thumb-box .bathroom-anchor-link,
+.hvac-thumb-box .livingroom1-anchor-link,
+.hvac-thumb-box .kitchen-anchor-link,
+.hvac-thumb-box .office-anchor-link,
+.hvac-thumb-box .bedroom-anchor-link{
+    margin-top: 15px;
+}
+/*door-and-window-thumb-box*/
+.door-and-window-thumb-box .bathroom-anchor-link,
+.door-and-window-thumb-box .livingroom1-anchor-link,
+.door-and-window-thumb-box .kitchen-anchor-link,
+.door-and-window-thumb-box .office-anchor-link,
+.door-and-window-thumb-box .bedroom-anchor-link{
+    margin-left: -15px;
+    margin-top: 12px;
+}
+.livingroom-thumb-box{
+    height: 500px;
+}
+
+.office-thumb-box{
+    width: 800px;
+    height: 580px;
+}
+.livingroom2-thumb-box{
+    height: 500px;
+}

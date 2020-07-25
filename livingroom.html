@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Panel</title>
+    <link rel="shortcut icon" href=" img/icon/fav-icon.png">
+
+     <!-- CSS
+    ========================= -->
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--font awesome CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--owl carousel min css-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!--slick min css-->
+<!--     <link rel="stylesheet" href="css/slick.css"> -->
+    <!--animate css-->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+      
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="mep">
+    <style>
+   .doorIcon {
+        width: 57px;
+        position: absolute;
+        top: 293px;
+        left: 432px;
+    }
+    .living-room-1.blackdoor {
+        width: 97px;
+        position: absolute;
+        top: 355px;
+        left: 432px;
+    }
+    </style>
+  </head>
+  <body>
+    <section class="top-section">
+        <div class="container-fluid">
+            <div class="top-information d-flex justify-content-between">
+                <div class="time-are">
+                   12:43 <sup class="zone">PM</sup><span class="days-date">Tuesday<br> july 3rd</span>
+                </div>
+                <div class="d-flex">
+                    <div class="cloud-img">
+                        <img src="./image/Home_Panel.png">
+                    </div>
+                    <div class="right-deg">
+                        <h3>75<sup class="degree">o</sup></h3>
+                        <p>81<sup class="">&deg;</sup><span>&#8593;</span></p>
+                        <p>47<sup class="">&deg;</sup><span>&#8595;</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="middle-map">
+        <div class="container">
+            <div class="comn-thumb-box livingroom-thumb-box">
+                <img src="./image/livingRoom5.jpeg">
+                <img src="image/black.jpeg" class="living-room-1 blackdoor">
+                <img src="image/door.jpeg" class="living-room-1 doorIcon" style="display:none">
+                <img src="image/fan.png" class="living-room-1-icon1">
+                <img src="image/yellow-blub.png" class="living-room-1-icon2 blub">
+                <img src="image/yellow-blub.png" class="living-room-1-icon3 blub">
+                <img src="image/daimond-blub1.png" class="living-room-1-icon4 blub">
+                <img src="image/living-room-sunlight.png" class="living-room-1-icon5">
+                <img src="image/windowshade.jpeg" class="living-room-1-icon6 skylight">
+                <img src="image/t15.png" class="living-room-1-icon7 skylight">
+                <img src="image/vent-icon.png" class="living-room-1-icon8 hvac">
+                <img src="image/kitchen-blub3.png" class="living-room-1-icon9 tubelight">
+                <img src="image/fire.png" class="living-room-1-icon10 fire" style="display:none">
+
+                <div class="comn-livingroom-small-box bind-box open-window" style="display:none">
+                    <h4 class="comn-livingroom-heading">Livingroom Binds</h4>
+                    <img src="image/window-shade-2.png" class="bind-icon1">
+                    <img src="image/open-closed-tab-icon.png" class="bind-icon2">
+                </div>
+            </div>
+        </div>
+        <div class="right-icons">
+      <ul class="horizon_images">
+          <li><img src="./image/hads.png"></li>
+          <li class="active"><img src="./image/light.png"></li>
+          <li><img src="./image/sofa.png"></li>
+          <li><img src="./image/moon.png"></li>
+      </ul>  
+    </div>
+    </section>
+    
+
+    <footer class="footer-area-2">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between">
+                <div class="motion">
+                    <img src="./image/living-room-2.png">
+                </div>
+                <div class="d-flex">
+                    <h2 class="bathroom_head">LIVING ROOM</h2> <div class="active home-img"><img src="./image/Home-white.png"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  </body>
+    <!--jquery min js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Popper min js-->
+    <script type="text/javascript" src="js/popper.min.js"></script> 
+    <!--bootstrap min js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--owl carousel min js-->
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
+    <!--slick min js-->
+    <!-- <script src="js/slick.min.js"></script> -->
+    <!-- Main JS -->
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+
+
+        var query = window.location.search.substring(1);
+        var parms = query.split('&');
+
+    if(parms =="fan"){
+        
+          var api_url = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/87?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+          $.ajax({
+                url: api_url,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                   //   console.log(result);
+                   console.log(result.attributes[2].currentValue);
+                    if(result.attributes[2].currentValue ==  'OFF'){
+                        console.log("dkhf");
+                        $('.living-room-1-icon1').css('display','none');
+                        $('.skylight').css('display','block');
+                        $('.living-room-1-icon5').css('display','none');
+                        $('.doorIcon').css('display','block');
+                        $('.blackdoor').css('display','none');
+                        $('.fire').css('display','block');
+                        $('.tubelight').css('display','none');
+                        $('.blub').css('display','none');
+
+
+                    }else{
+                        $('.living-room-1-icon1').css('display','block');
+                        $('.blub').css('display','none');
+                        $('.living-room-1-icon5').css('display','none');
+                        $('.skylight').css('display','block');
+                        $('.doorIcon').css('display','block');
+                        $('.fire').css('display','block');
+                        $('.blackdoor').css('display','none');
+                        $('.tubelight').css('display','none');
+                    }   
+
+                }
+            });
+          var api='https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/548?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+           $.ajax({
+                url: api,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                   console.log(result.attributes[2].currentValue);
+                    if(result.attributes[2].currentValue ==  'on'){
+                        $('.skylight').css('display','block');
+                    }else{
+                        $('.skylight').css('display','none');      
+                    }   
+                }
+            });
+
+     }else if( parms=="light" ){
+      
+        var api_url = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/104?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+           $.ajax({
+
+                url: api_url,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                      
+                    if(result.attributes[4].currentValue == 'off'){
+                        $('.blub').css('display','none');
+                        $('.living-room-1-icon1').css('display','none');
+                        $('.living-room-1-icon5').css('display','none');
+                        $('.doorIcon').css('display','none');
+                        $('.fire').css('display','none');
+                        $('.skylight').css('display','none');
+                        $('.blackdoor').css('display','block');
+                    }else{
+                        $('.blub').css('display','block');
+                        $('.doorIcon').css('display','none');
+                        $('.fire').css('display','none');
+                        $('.skylight').css('display','none');
+                        $('.blackdoor').css('display','block');
+                    }   
+
+                }
+            });
+         var api_url1 = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/113?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+           $.ajax({
+
+                url: api_url1,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                     console.log(result.attributes[9]);
+                    if(result.attributes[9].currentValue == 'off'){
+                        $('.living-room-1-icon5').css('display','none');
+                    }else{
+                         $('.living-room-1-icon5').css('display','block');
+                    }   
+
+                }
+            });
+    }else if(parms =="vactor-light"){
+         //alert(parms);
+        var api_url = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/935?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+          $.ajax({
+                url: api_url,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                    if(result.attributes[6].currentValue == 'inactive'){
+                        $('.living-room-1-icon5').css('display','none');
+                        $('.living-room-1-icon1').css('display','none');
+                        $('.living-room-1-icon5').css('display','none');
+                        $('.skylight').css('display','block');
+                        $('.tubelight').css('display','none');
+                        $('.blub').css('display','none');
+                        $('.doorIcon').css('display','block');
+                        $('.blackdoor').css('display','none');
+                    }else{
+                        $('.living-room-1-icon5').css('display','block');
+                        $('.living-room-1-icon1').css('display','none');
+                        $('.living-room-1-icon5').css('display','none');
+                        $('.skylight').css('display','block');
+                        $('.tubelight').css('display','none');
+                        $('.blub').css('display','none');
+                        $('.doorIcon').css('display','block');
+                        $('.blackdoor').css('display','none');
+                    }  
+
+                }
+            });
+    }else if(parms =="gray-light"){
+alert("df");
+        $('.living-room-1-icon5').css('display','none');
+        $('.living-room-1-icon1').css('display','none');
+        $('.living-room-1-icon5').css('display','none');
+        $('.skylight').css('display','none');
+        $('.tubelight').css('display','none');
+        $('.blub').css('display','none');
+        $('.doorIcon').css('display','none');
+        $('.blackdoor').css('display','block');
+
+    }
+    // $( document ).ready(function() {
+    //     $('.living-room-1-icon5').css('display','none');
+    //     $('.living-room-1-icon1').css('display','none');
+    //     $('.skylight').css('display','none');
+    //     $('.tubelight').css('display','none');
+    //     $('.blub').css('display','none');
+    //     $('.doorIcon').css('display','none');
+    //     $('.blackdoor').css('display','none');
+    //     $('.hvac').css('display','none');
+        
+
+    // });
+
+
+    </script>
+
+</html>

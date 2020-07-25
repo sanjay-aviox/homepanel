@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Panel</title>
+    <link rel="shortcut icon" href=" img/icon/fav-icon.png">
+
+     <!-- CSS
+    ========================= -->
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--font awesome CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--owl carousel min css-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!--slick min css-->
+   <!--  <link rel="stylesheet" href="css/slick.css"> -->
+    <!--animate css-->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+      
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="mep">
+  </head>
+  <style>
+    .bind-box {
+        width: 218px;
+        height: 156px;
+        top: 77px;
+        right: 1159px;
+        text-align: center;
+    }
+    img.loader {
+        width: 800px;
+        position: absolute;
+        top: 74px;
+        left: 561px;
+     }
+  </style>
+  <body>
+    <section class="top-section">
+        <div class="container-fluid">
+            <div class="top-information d-flex justify-content-between">
+                <div class="time-are">
+                   12:43 <sup class="zone">PM</sup><span class="days-date">Tuesday<br> july 3rd</span>
+                </div>
+                <div class="d-flex">
+                    <div class="cloud-img">
+                        <img src="./image/Home_Panel.png">
+                    </div>
+                    <div class="right-deg">
+                        <h3>75<sup class="degree">o</sup></h3>
+                        <p>81<sup class="">&deg;</sup><span>&#8593;</span></p>
+                        <p>47<sup class="">&deg;</sup><span>&#8595;</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="middle-map">
+        <div class="container">
+            <div class="comn-thumb-box office-thumb-box">
+                <img src="./image/office3.png">
+                <img src="image/office-icon.png" class="office-icon1">
+                <img src="image/office-blub1.png" class="office-icon2">
+                <img src="image/office-blub2.png" class="office-icon3">
+            </div>
+            <!--div class="comn-livingroom-small-box bind-box open-window">
+                <h4 class="comn-livingroom-heading">Livingroom Binds</h4>
+                <img src="image/window-shade-2.png" class="bind-icon1">
+                <img src="image/open-closed-tab-icon.png" class="bind-icon2">
+            </div-->
+        </div>
+        <div class="right-icons">
+            <ul class="horizon_images">
+                <li><img src="./image/hads.png"></li>
+                <li class="active"><img src="./image/light.png"></li>
+                <li><img src="./image/sofa.png"></li>
+                <li><img src="./image/moon.png"></li>
+            </ul>  
+        </div>
+    </section>
+    
+
+    <footer class="footer-area-2">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between">
+                <div class="motion">
+                    <img src="./image/office-footer.png">
+                </div>
+                <div class="d-flex">
+                    <h2 class="bathroom_head">OFFICE</h2> <div class="active home-img"><img src="./image/Home-white.png"></div>
+                </div>
+            </div>
+        </div>
+        <img src="image/loader.gif" class="loader" style="display:none;">
+    </footer>
+
+  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Popper min js-->
+    <script type="text/javascript" src="js/popper.min.js"></script> 
+    <!--bootstrap min js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--owl carousel min js-->
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
+    <!--slick min js-->
+    <!-- <script src="js/slick.min.js"></script> -->
+    <!-- Main JS -->
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            $('.loader').css('display','block');
+        });
+        var query = window.location.search.substring(1);
+        var parms = query.split('&');
+
+         // var api2 = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/67?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+         //    $.ajax({
+         //        url: api2,
+         //        contentType: "application/json",
+         //        dataType: 'json',
+         //        success: function(result){
+         //           //   console.log(result);
+         //           console.log(result.attributes);
+         //            if(result.attributes[4].currentValue ==  'closed'){
+         //                $('.window').css('display','none');
+         //            }else{
+         //                $('.window').css('display','block');
+         //            }   
+
+         //        }
+         //    });
+
+
+        if(parms =="light"){
+            //Office Globe light
+            var api = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/108?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+            $.ajax({
+                url: api,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                   //   console.log(result);
+                   console.log(result.attributes);
+                    if(result.attributes[3].currentValue ==  'off'){
+                       $('.office-icon2').css('display','none');
+                    }else{
+                       $('.office-icon2').css('display','block');
+                    }   
+
+                }
+            });
+            //Office Lights
+            var api1 = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/72?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+            $.ajax({
+                url: api1,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                   //   console.log(result);
+                   console.log(result.attributes);
+                    if(result.attributes[1].currentValue ==  'off'){
+                       $('.office-icon1').css('display','none');
+                    }else{
+                       $('.office-icon1').css('display','block');
+                    }   
+
+                }
+            });
+            //Office Light Panel
+            var api2 = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/898?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+            $.ajax({
+                url: api2,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                   //   console.log(result);
+                   console.log(result.attributes);
+                    if(result.attributes[3].currentValue ==  'off'){
+                       $('.office-icon3').css('display','none');
+                    }else{
+                       $('.office-icon3').css('display','block');
+                    }   
+
+                }
+            });
+           
+
+
+        }else{
+
+        }
+// $(res).each(function (index, item) {
+//     if(item.label == "Office Shades" ){
+//         if(item.attributes.windowShade == "closed"){
+//             $('.open-window').css('display','none');
+//         }else{
+//             $('.open-window').css('display','block');
+//         }   
+//     }
+//     if(item.label == "Office Globe light" ){
+//         if(item.attributes.switch == "off"){
+//             $('.office-icon1').css('display','none');
+//         }else{
+//              $('.office-icon1').css('display','block');
+//         }   
+//     }
+//     if(item.label == "Office Desk Light Panel" ){
+//         if(item.attributes.switch == "off"){
+//             $('.office-icon3').css('display','none');
+//         }else{
+//             $('.office-icon3').css('display','block');
+//         }   
+//     }
+//     if(item.label == "Office Sensor" ){
+//         if(item.attributes.motion == "inactive"){
+//             $('.office-icon2').css('display','none');
+//         }else{
+//              $('.office-icon2').css('display','block');
+//         }   
+//     }
+// });
+    </script>
+
+</html>
+

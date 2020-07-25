@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Panel</title>
+    <link rel="shortcut icon" href=" img/icon/fav-icon.png">
+
+     <!-- CSS
+    ========================= -->
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--font awesome CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--owl carousel min css-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!--slick min css-->
+   <!--  <link rel="stylesheet" href="css/slick.css"> -->
+    <!--animate css-->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+      
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="mep">
+    <style>
+        img.living-room-1.reddoor {
+            width: 82px;
+            position: absolute;
+            top: 49px;
+            right: 88px;
+            height: 30px;
+        }
+        img.blue-light {
+            width: 28px;
+            position: absolute;
+            bottom: 174px;
+            right: 140px;
+        }
+        img.left-icon1 {
+            width: 518px;
+            position: absolute;
+            bottom: 322px;
+            right: 207px;
+        }
+        img.gray-door {
+            width: 80px;
+            position: absolute;
+            bottom: 150px;
+            right: 227px;
+        }
+        img.loader {
+            width: 800px;
+            position: absolute;
+            top: 74px;
+            left: 289px;
+        }
+        .tubelight {
+            width: 12px;
+            position: absolute;
+            bottom: 213px;
+            right: 58px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <section class="top-section">
+        <div class="container-fluid">
+            <div class="top-information d-flex justify-content-between">
+                <div class="time-are">
+                   12:43 <sup class="zone">PM</sup><span class="days-date">Tuesday<br> july 3rd</span>
+                </div>
+                <div class="d-flex">
+                    <div class="cloud-img">
+                        <img src="./image/Home_Panel.png">
+                    </div>
+                    <div class="right-deg">
+                        <h3>75<sup class="degree">o</sup></h3>
+                        <p>81<sup class="">&deg;</sup><span>&#8593;</span></p>
+                        <p>47<sup class="">&deg;</sup><span>&#8595;</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="middle-map">
+        <div class="container">
+            <div class="comn-thumb-box">
+                <img src="./image/bathroom1.png">
+
+                <img src="image/bathroom-blub1.png" class="bathroom-icon1 blub">
+                <img src="image/bathroom-blub1.png" class="bathroom-icon2 blub">
+                <img src="image/bathroom-blub1.png" class="bathroom-icon3 blub">
+                <img src="image/bathroom-blub1.png" class="bathroom-icon4 blub">
+                <!----Yellow Light----->
+                <img src="image/yellow-blub.png" class="bathroom-icon1 yellow-light">
+                <img src="image/yellow-blub.png" class="bathroom-icon2 yellow-light">
+                <img src="image/yellow-blub.png" class="bathroom-icon3 yellow-light">
+                <img src="image/yellow-blub.png" class="bathroom-icon4 yellow-light">
+                
+                <!-----Yellow Tube Light---------->
+                <img src="image/tubelight.jpeg" class="tubelight yellow-tube-light">
+                <img src="image/graytubelight.jpeg" class="tubelight brown-tube-light">
+
+                <!-----skyLight---------->
+                <img src="image/living-room-window1.png" class="bathroom-icon5 skylight" style="display:none">
+                <img src="image/t15.png" class="bathroom-icon5 skylightOff" style="display:none">
+
+
+                <img src="image/door&window-red-horin.png" class="living-room-1 reddoor">
+                <img src="image/bathroom-blue-icon.png" class="blue-light">
+                
+                <img src="image/dnw-left-light.png" class="left-icon1 vactorLight">
+                <img src="image/bathroom-grey-window.png" class="gray-door">
+            </div>
+        </div>
+        <div class="right-icons">
+      <ul class="horizon_images">
+          <li><img src="./image/hads.png"></li>
+          <li class="active"><img src="./image/light.png"></li>
+          <li><img src="./image/sofa.png"></li>
+          <li><img src="./image/moon.png"></li>
+      </ul>  
+    </div>
+    </section>
+    
+
+    <footer class="footer-area">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <h2 class="bathroom_head">BATHROOM</h2> <div class="active home-img"><img src="./image/Home-white.png"></div>
+            </div>
+        </div>
+        <img src="image/loader.gif" class="loader" style="display:none;">
+    </footer>
+
+  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script> 
+    <!--bootstrap min js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--owl carousel min js-->
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
+    <!--slick min js-->
+    <!-- <script src="js/slick.min.js"></script> -->
+    <!-- Main JS -->
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            $('.loader').css('display','block');
+        });
+        var query = window.location.search.substring(1);
+        var parms = query.split('&');
+        if(parms =="fan"){
+        
+          var api_url = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/87?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+          $.ajax({
+                url: api_url,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                   //   console.log(result);
+                   console.log(result.attributes[2].currentValue);
+                    if(result.attributes[2].currentValue ==  'OFF'){
+                        console.log("dkhf");
+                        $('.reddoor').css('display','block');
+                       // $('.skylight').css('display','none');
+                        $('.blue-light').css('display','block');
+                       
+
+                    }else{
+                        $('.reddoor').css('display','block');
+                        //$('.skylight').css('display','none');
+                        $('.blue-light').css('display','block');
+                      
+                    }   
+
+                }
+            });
+          // var api='https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/548?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+          //  $.ajax({
+          //       url: api,
+          //       contentType: "application/json",
+          //       dataType: 'json',
+          //       success: function(result){
+          //          console.log(result.attributes[2].currentValue);
+          //           if(result.attributes[2].currentValue ==  'on'){
+          //               $('.skylight').css('display','none');
+          //           }else{
+          //               $('.skylight').css('display','none');      
+          //           }   
+          //       }
+          //   });
+
+     }else if( parms=="light" ){
+       
+        // Bathroom Brass Lights //
+        var api_url = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/77?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+
+            $('.blue-light').css('display','none');
+            $('.reddoor').css('display','none');
+            $('.vactorLight').css('display','none');
+
+           $.ajax({
+
+                url: api_url,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                    $('.loader').css('display','none');
+                     // console.log(result.attributes[].currentValue);
+                    if(result.attributes[1].currentValue == 'off'){
+                        $('.blub').css('display','block');
+                        $('.yellow-light').css('display','none')
+                       
+                    }else{
+                        $('.blub').css('display','none');
+                        $('.yellow-light').css('display','block')
+
+                    }   
+
+                }
+            });
+        
+        // Bathroom Tub Light //
+        var api_url = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/80?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+
+            $('.blue-light').css('display','none');
+            $('.reddoor').css('display','none');
+            $('.vactorLight').css('display','none');
+
+           $.ajax({
+
+                url: api_url,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                    $('.loader').css('display','none');
+                     // console.log(result.attributes[].currentValue);
+                    if(result.attributes[2].currentValue == 'off'){
+                        $('.yellow-tube-light').css('display','none');
+                        $('.brown-tube-light').css('display','block');
+
+                    }else{
+                        $('.yellow-tube-light').css('display','block');
+                        $('.brown-tube-light').css('display','none');
+                    }   
+                }
+            });
+        
+         // Bathroom Sky Light //
+        var skylightApi ='https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/513?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+
+         $.ajax({
+
+                url: skylightApi,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                    $('.loader').css('display','none');
+                     console.log(result.attributes);
+                    if(result.attributes[2].currentValue == 'off'){
+                        $('.skylight').css('display','none');
+                        $('.skylightOff').css('display','block');
+
+                    }else{
+                        $('.skylight').css('display','block');
+                        $('.skylightOff').css('display','none');
+                      
+                    }   
+                }
+            });
+
+    }
+    else if(parms =="vactor-light"){
+        $('.blue-light').css('display','none');
+        $('.blackdoor').css('display','none');
+        $('.blub').css('display','none');
+        $('.yellow-light').css('display','none');
+        $('.tubelight').css('display','none');
+
+        var api_url = 'https://cloud.hubitat.com/api/7e6e2ef9-33ea-4ef0-b89c-31559e503bb7/apps/644/devices/935?access_token=21841e98-5bc9-4921-851b-cc89c6188666';
+          $.ajax({
+                url: api_url,
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result){
+                     $('.loader').css('display','none');
+                    if(result.attributes[6].currentValue == 'inactive'){
+                        $('.doorIcon').css('display','block');
+                        $('.vactorLight').css('display','block');
+                    }else{
+                        $('.doorIcon').css('display','block');
+                        $('.vactorLight').css('display','block');
+                        
+                    }  
+
+                }
+            });
+      }
+    // }else if(parms =="gray-light"){
+
+
+
+    // }
+    // $( document ).ready(function() {
+     
+    //     $('.skylight').css('display','none');
+    //     $('.blub').css('display','none');
+
+    // });
+    </script>
+</html>

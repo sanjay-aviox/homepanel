@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Panel</title>
+    <link rel="shortcut icon" href=" img/icon/fav-icon.png">
+
+     <!-- CSS
+    ========================= -->
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--font awesome CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Main Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+      
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="mep">
+    <style>
+.lighting-icon {
+    width: 850px;
+    height: 581px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+.hvac-all-icon {
+    width: 850px;
+    height: 625px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+.left-icon {
+    width: 132px;
+    position: absolute;
+    left: 135px;
+    top: 245px;
+    bottom: 0px;
+    /* display: block !important; */
+}
+.right-icon {
+    width: 100px;
+    position: absolute;
+    left: 329px;
+    top: 78px;
+    bottom: 0px;
+    /* display: block !important; */
+}
+
+.left-icon1 {
+    width: 120px;
+    position: absolute;
+    left: 72px;
+    top: 72px;
+    bottom: 0px;
+}
+.right-icon1 {
+    width: 200px;
+    position: absolute;
+    top: 79px;
+    right: 75px;
+}
+    </style>
+  </head>
+  <body>
+    <section class="top-section">
+        <div class="container-fluid">
+            <div class="top-information d-flex justify-content-between">
+                <div class="time-are">
+                   12:43 <sup class="zone">PM</sup><span class="days-date">Tuesday<br> july 3rd</span>
+                </div>
+                <div class="d-flex">
+                    <div class="cloud-img">
+                        <img src="./image/Home_Panel.png">
+                    </div>
+                    <div class="right-deg">
+                        <h3>75<sup class="degree">o</sup></h3>
+                        <p>81<sup class="">&deg;</sup><span>&#8593;</span></p>
+                        <p>47<sup class="">&deg;</sup><span>&#8595;</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="middle-map">
+        <div class="container">
+            <div class="comn-thumb-box door-and-window-thumb-box">
+                <img src="./image/door&window1.png" class="doorWindow">
+                <img src="./image/power.png" class="power" style="display:none">
+                <img src="./image/light2.png" class="summary" style="display:none">
+                <img src="./image/hvac2.png" class="hvac" style="display:none">
+                <img src="image/ri1.png" class="left-icon" style="display:none">>
+                <img src="image/ri1.png" class="right-icon" >
+                <img src="image/dnw-left-light.png" class="left-icon1">
+                <img src="image/ri1.png" class="right-icon1" style="display:none;">
+                <img src="image/blub-light1.png" class="lighting-icon" style="display:none;">
+                <img src="image/hvac-fan1.png" class="hvac-all-icon" style="display:none;">
+                <a  class="bathroom-anchor-link bathroom" title="Bathroom"></a>
+                <a  class="livingroom1-anchor-link living" title="Living-Room"></a>
+                <a href="kitchen.html" class="kitchen-anchor-link"></a>
+                <a href="office.html" class="office-anchor-link"></a>
+                <a  class="bedroom-anchor-link "></a>
+            </div>
+        </div>
+        <div class="right-icons">
+      <!--ul class="horizon_images">
+          <li><img src="./image/hads.png"></li>
+          <li class="active"><img src="./image/light.png"></li>
+          <li><img src="./image/sofa.png"></li>
+          <li><img src="./image/moon.png"></li>
+      </ul-->  
+    </div>
+    </section>
+    
+
+    <footer class="footer-area-2">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between">
+                <div class="user-img">
+                    <ul class="foote_bootom_icon">
+                        <li><img src="./image/image 2.png"></li>
+                        <li><img src="./image/image 1.png"></li>
+                    </ul>
+                </div>
+                <div class="bottom-icons">
+                    <ul class="foote_bootom_icon-2">
+                        <li class="list" data-value="light"><img src="./image/Vector-(3).png" class="light"></li>
+                        <li class="list" data-value="fan"><img src="./image/Vector-(4).png" class="fan"></li>
+                        <li class="list active" data-value="vactor-light"><img src="./image/Vector.png" class="vactor-light"></li>
+                        <li class="list" data-value="light"><img src="./image/Vector (2).png"></li>
+                        <li class="list" data-value="light"><img src="./image/Vector (1).png" class="powerIcon"></li>
+                        <!--li><img src="./image/Home-grey.png" class="gray-light"></li-->
+                        <li class="list" data-value="gray-light"><img src="./image/Home-grey.png" class="gray-light"></li>      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  </body>
+    <!--jquery min js-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!--Popper min js-->
+    <script type="text/javascript" src="js/popper.min.js"></script> 
+    <!--bootstrap min js-->
+    <script src="js/bootstrap.min.js"></script>
+
+        <script>
+        $('.light').click(function() {
+            var $this = $(this);
+            $this.closest('ul').find('.active').removeClass('active');
+            $this.parent().addClass('active');
+            $('.lighting-icon').css('display','block');
+            $('.left-icon').css('display','none');
+            $('.right-icon').css('display','none');
+            $('.hvac-all-icon').css('display','none');
+            $('.left-icon1').css('display','none');
+            $('.right-icon1').css('display','none');
+            $('.power').css('display','none');
+            $('.doorWindow').css('display','none');
+            $('.summary').css('display','block');
+            $('.hvac').css('display','none');
+
+        });
+
+        $('.fan').click(function() {
+
+            var $this = $(this);
+            $this.closest('ul').find('.active').removeClass('active');
+            $this.parent().addClass('active');
+            $('.hvac-all-icon').css('display','block');
+            $('.left-icon').css('display','none');
+            $('.right-icon').css('display','none');
+            $('.lighting-icon').css('display','none');
+            $('.left-icon1').css('display','none');
+            $('.right-icon1').css('display','none');
+            $('.power').css('display','none');
+            $('.doorWindow').css('display','none');
+            $('.hvac').css('display','block');
+            $('.summary').css('display','none');
+        });
+        $('.vactor-light').click(function() {
+
+            var $this = $(this);
+            $this.closest('ul').find('.active').removeClass('active');
+            $this.parent().addClass('active');
+            $('.hvac-all-icon').css('display','none');
+            $('.left-icon1').css('display','block');
+            $('.right-icon').css('display','block');
+            $('.lighting-icon').css('display','none');
+//left-icon1').css('display','none');
+            $('.right-icon1').css('display','none');
+            $('.doorWindow').css('display','block');
+            $('.power').css('display','none');
+            $('.hvac').css('display','none');
+            $('.summary').css('display','none');
+        
+        });
+
+        $('.gray-light').click(function() {
+
+            var $this = $(this);
+            $this.closest('ul').find('.active').removeClass('active');
+            $this.parent().addClass('active');
+            $('.hvac-all-icon').css('display','none');
+            $('.left-icon1').css('display','none');
+            $('.right-icon').css('display','none');
+            $('.lighting-icon').css('display','none');
+            $('.left-icon').css('display','block');
+            $('.right-icon1').css('display','block');
+            $('.doorWindow').css('display','none');
+            $('.summary').css('display','block');
+            $('.power').css('display','none');
+            $('.hvac').css('display','none');
+        
+        });
+
+        $('.powerIcon').click(function() {
+
+            var $this = $(this);
+            $this.closest('ul').find('.active').removeClass('active');
+            $this.parent().addClass('active');
+            $('.hvac-all-icon').css('display','none');
+            $('.left-icon').css('display','none');
+            $('.right-icon').css('display','none');
+            $('.lighting-icon').css('display','none');
+            $('.left-icon1').css('display','none');
+            $('.right-icon1').css('display','none');
+            $('.doorWindow').css('display','none');
+            $('.power').css('display','block');
+            $('.summary').css('display','none');
+            $('.hvac').css('display','none');
+        
+        });
+
+        $('.living').click(function() {
+            var val = $(".list.active").attr("data-value");
+            window.location = 'livingroom.html?' + val;
+        });
+        $('.bathroom').click(function() {
+            var val = $(".list.active").attr("data-value");
+            window.location = 'bathroom.html?' + val;
+        });
+        
+        
+    </script>
+
+</html>
